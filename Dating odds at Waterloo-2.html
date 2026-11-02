@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dating odds at Waterloo</title>
+<style>
+:root{--ink:#2a1a5e;--muted:#6d628f;--bg:#f4efff;--panel:#fff;--line:#ddd3f5;--pink:#ff4f87;--pink-soft:#ffe1ec;--gold:#ffc933;--mint:#2fcf93;--onink:#fff;
+  --font:ui-rounded,"SF Pro Rounded","Nunito","Trebuchet MS",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#f3edff;--muted:#b3a9d6;--bg:#1a1233;--panel:#261b4a;--line:#43357a;--pink:#ff6b9a;--pink-soft:#432047;--onink:#1a1233}}
+:root[data-theme="dark"]{--ink:#f3edff;--muted:#b3a9d6;--bg:#1a1233;--panel:#261b4a;--line:#43357a;--pink:#ff6b9a;--pink-soft:#432047;--onink:#1a1233}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.5}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 12% 8%,var(--pink-soft),transparent 38%),radial-gradient(circle at 92% 90%,rgba(255,201,51,.28),transparent 40%)}
+main{position:relative;max-width:720px;margin:0 auto;padding:24px 18px 48px}
+[hidden]{display:none!important}
+.hero{display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:8px}
+h1{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.02em}
+.lead{margin:0 0 6px;color:var(--muted)}
+.qr{background:var(--panel);border:2px solid var(--line);border-radius:18px;padding:10px;text-align:center;font-size:.78rem;color:var(--muted);flex:none}
+.qr div{background:#fff;padding:7px;border-radius:10px;display:inline-block;line-height:0}
+.qr p{margin:6px 0 0}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:24px;padding:20px 20px 6px;margin:18px 0}
+.card h2{margin:0 0 2px;font-size:1.3rem}
+.card>.sub{margin:0 0 16px;color:var(--muted);font-size:.92rem}
+fieldset{border:0;margin:0 0 18px;padding:0}
+legend{font-weight:700;padding:0;margin-bottom:6px}
+.hint{color:var(--muted);font-size:.82rem;margin:0 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:var(--bg);color:var(--ink);padding:9px 14px;border-radius:999px;font:inherit;font-size:.92rem;cursor:pointer;transition:transform .12s}
+.chip:hover{border-color:var(--pink)}
+.chip:active{transform:scale(.94)}
+.chip[aria-pressed=true]{background:var(--pink);border-color:var(--pink);color:#fff;font-weight:700}
+.you .chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--onink)}
+.chip:focus-visible,.btn:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.check{display:flex;gap:10px;align-items:center;margin-bottom:16px}
+.check input{width:20px;height:20px;accent-color:var(--pink)}
+.btn{display:block;width:100%;border:0;border-radius:18px;padding:16px;font:inherit;font-size:1.1rem;font-weight:800;cursor:pointer;background:var(--pink);color:#fff;box-shadow:0 5px 0 rgba(0,0,0,.18)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
+.btn:disabled{background:var(--line);color:var(--muted);box-shadow:none;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line);box-shadow:none;margin-top:10px;font-size:1rem}
+.need{text-align:center;color:var(--muted);font-size:.85rem;margin:10px 0 0;min-height:1.3em}
+.res{text-align:center;background:var(--panel);border:2px solid var(--line);border-radius:28px;padding:30px 22px 24px;margin-top:14px}
+.face{font-size:3.6rem;line-height:1;animation:pop .6s cubic-bezier(.3,1.6,.5,1)}
+.big{font-size:clamp(5rem,26vw,8rem);font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--pink);margin-top:8px}
+.big small{font-size:.4em}
+.tier{font-size:1.4rem;font-weight:800;margin:4px 0 16px}
+.meter{height:16px;border-radius:99px;background:var(--pink-soft);overflow:hidden;margin:0 auto 22px;max-width:380px}
+.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--pink));border-radius:99px;transition:width 1s ease-out}
+.twist{text-align:left;background:var(--bg);border-radius:18px;padding:14px 18px;margin:0 0 14px}
+.twist strong{display:block;margin-bottom:4px}
+.twist ul{margin:0;padding-left:20px}
+.banner{background:var(--pink-soft);border-radius:12px;padding:8px 12px;font-size:.88rem;margin-bottom:14px}
+.note{font-size:.78rem;color:var(--muted);margin:18px 4px 0}
+.share{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:20px;text-align:left}
+.share p{margin:0;max-width:20ch;color:var(--muted);font-size:.9rem}
+#s2.busy #back,#s2.busy .qrbox,#s2.busy .note{display:none!important}
+.calc{padding:30px 0 20px}.count{font-size:7rem;font-weight:900;color:var(--pink);line-height:1;animation:pop .5s}
+.calc p{color:var(--muted);font-weight:700;margin:10px 0 0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stats div{background:var(--bg);border-radius:18px;padding:14px 10px}
+.stats b{display:block;font-size:2rem;font-weight:900;line-height:1.1}.stats span{font-size:.82rem;color:var(--muted)}
+@keyframes pop{from{transform:scale(.2) rotate(-20deg);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:560px){.hero .qr{display:none}}
+@media(prefers-reduced-motion:reduce){.face{animation:none}.meter span{transition:none}.chip{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<section id="s1">
+  <div class="hero">
+    <div><h1>Your Waterloo love odds 💘</h1>
+    <p class="lead">Answer a few quick questions. We’ll check you against Waterloo students both ways: would you date them, and would they date you?</p></div>
+    <div class="qr qr1" hidden><div id="qr1"></div><p>Scan to play</p></div>
+  </div>
+  <div class="card you" id="cardYou"><h2>🙋 About you</h2><p class="sub">Tap everything that fits.</p></div>
+  <div class="card" id="cardType"><h2>💭 Your type</h2><p class="sub">Leave a section empty if anyone works for you.</p></div>
+  <button class="btn" id="go" type="button" disabled>Reveal my odds 💘</button>
+  <p class="need" id="need"></p>
+</section>
+
+<section id="s2" hidden>
+  <div class="res" id="out" aria-live="polite"></div>
+  <button class="btn ghost" id="back" type="button">✏️ Change my answers</button>
+  <div class="share qrbox" hidden><div class="qr"><div id="qr2"></div></div><p>Send this to a friend, or have them scan it.</p></div>
+  <p class="note">A fun estimate built from a survey of Waterloo students plus typical Waterloo demographics and dating preferences. Not a prediction.</p>
+</section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const PAGE_URL = "https://claude.ai/artifact/WQTDk7xxRV5UXaxJ85vu2H";
+//MODEL-START
+const REAL = [{"wants":"Maybe","gender":"Female","age":"17-19","faculty":["Math"],"height":"5'3-5'4","race":["South Asian"],"religion":"Hindu","politics":["Liberal"],"attracted_to":["Male"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","East Asian","South Asian","Black"],"religion":["Christian","Jewish","Hindu","Atheist/Agnostic"],"politics":["Liberal"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Math"],"height":"5'11-6'1","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal","Conservative"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10"],"race":["White","Hispanic/Latino","East Asian"],"religion":["Christian","Jewish","Atheist/Agnostic"],"politics":["Liberal","Conservative"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Math"],"height":"5'1-5'2","race":["South Asian"],"religion":"Hindu","politics":["Liberal"],"attracted_to":["Male"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'8-5'10"],"race":["White","South Asian","Black","Arab/Middle Eastern"],"religion":["Christian","Hindu","Atheist/Agnostic"],"politics":["Liberal","Socialist"]}},{"wants":"Maybe","gender":"Female","age":"17-19","faculty":["Environment"],"height":"5'3-5'4","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Male"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Arts","Environment","Health","Science"],"height":["5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian"],"religion":["Atheist/Agnostic"],"politics":["Liberal"]}},{"wants":"Maybe","gender":"Female","age":"17-19","faculty":["Engineering"],"height":"5'1-5'2","race":["Hispanic/Latino"],"religion":"Christian","politics":["Conservative"],"attracted_to":["Male"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Environment","Health","Science","Accounting/Finance"],"height":["5'8-5'10","5'11-6'1"],"race":["White","Hispanic/Latino","South Asian"],"religion":["Christian","Atheist/Agnostic"],"politics":["Liberal","Conservative","Other"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Math"],"height":"5'11-6'1","race":["White"],"religion":"Atheist/Agnostic","politics":["Liberal","Socialist"],"attracted_to":["Male"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian","South Asian","Indigenous","Arab/Middle Eastern"],"religion":["Atheist/Agnostic"],"politics":["Liberal","Socialist"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Health"],"height":"5'8-5'10","race":["East Asian"],"religion":"Buddhist","politics":["Other"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],"race":["White"],"religion":["Christian","Jewish"],"politics":["Liberal","Conservative","Communist","Socialist"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Engineering"],"height":"5'11-6'1","race":["White"],"religion":"Christian","politics":["Liberal"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23"],"faculty":["Engineering","Arts","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],"race":["White","Hispanic/Latino","East Asian","Arab/Middle Eastern"],"religion":["Christian","Muslim","Atheist/Agnostic"],"politics":["Liberal","Conservative","Other"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Engineering"],"height":"5'11-6'1","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Conservative"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian"],"religion":["Christian","Atheist/Agnostic"],"politics":[]}},{"wants":"Maybe","gender":"Female","age":"17-19","faculty":["Engineering"],"height":"5'8-5'10","race":["White"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Male"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],"race":["White","Hispanic/Latino","Black","Indigenous"],"religion":["Christian","Jewish","Muslim","Hindu","Atheist/Agnostic"],"politics":["Liberal","Conservative"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Math"],"height":"5'11-6'1","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal","Conservative"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math"],"height":["5'5-5'7"],"race":["White","East Asian"],"religion":["Christian","Atheist/Agnostic"],"politics":["Other"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Science"],"height":"5'11-6'1","race":["White"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10"],"race":["White","Hispanic/Latino","Black"],"religion":["Christian","Jewish","Hindu","Atheist/Agnostic"],"politics":["Liberal"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Health"],"height":"5'8-5'10","race":["East Asian"],"religion":"Christian","politics":["Conservative"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10"],"race":["East Asian"],"religion":["Christian"],"politics":["Conservative"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Science"],"height":"5'5-5'7","race":["Hispanic/Latino"],"religion":"Christian","politics":["Other"],"attracted_to":["Male","Female","Other"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Environment","Health","Science","Accounting/Finance"],"height":["5'11-6'1","6'2-6'3","6'4+"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Christian","Jewish","Muslim","Hindu","Atheist/Agnostic"],"politics":["Liberal","Conservative","Communist","Socialist","Other"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Engineering"],"height":"5'3-5'4","race":["White"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Christian","Atheist/Agnostic"],"politics":["Liberal","Conservative"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Science"],"height":"6'2-6'3","race":["Arab/Middle Eastern"],"religion":"Atheist/Agnostic","politics":["Other"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian","South Asian","Indigenous","Arab/Middle Eastern"],"religion":["Christian","Muslim","Hindu","Atheist/Agnostic"],"politics":["Liberal","Conservative","Socialist","Other"]}},{"wants":"Maybe","gender":"Female","age":"17-19","faculty":["Science"],"height":"5'3-5'4","race":["South Asian"],"religion":"Atheist/Agnostic","politics":["Socialist"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Atheist/Agnostic"],"politics":["Liberal","Socialist"]}},{"wants":"Maybe","gender":"Female","age":"17-19","faculty":["Science"],"height":"5'3-5'4","race":["White"],"religion":"Atheist/Agnostic","politics":["Other"],"attracted_to":["Male"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science"],"height":["5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Christian","Atheist/Agnostic"],"politics":["Other"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Engineering"],"height":"5'5-5'7","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Other"],"attracted_to":["Male","Female","Other"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian"],"religion":["Christian","Atheist/Agnostic"],"politics":["Other"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Math"],"height":"5'5-5'7","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal","Socialist"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Christian","Jewish","Muslim","Hindu","Atheist/Agnostic"],"politics":["Liberal","Socialist","Other"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Math"],"height":"6'2-6'3","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Christian","Jewish","Muslim","Hindu","Atheist/Agnostic"],"politics":["Liberal","Conservative","Socialist"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Math"],"height":"6'2-6'3","race":["South Asian"],"religion":"Atheist/Agnostic","politics":["Liberal","Socialist"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23","24+"],"faculty":["Math","Engineering","Arts","Science","Accounting/Finance"],"height":["5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Atheist/Agnostic"],"politics":["Liberal","Communist","Socialist"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Engineering"],"height":"5'11-6'1","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Male"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Health","Science","Accounting/Finance"],"height":["5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],"race":["White","East Asian"],"religion":["Atheist/Agnostic"],"politics":["Liberal","Conservative","Socialist"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Math"],"height":"5'8-5'10","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Female"],"pref":{"age":["17-19","20-23","24+"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Atheist/Agnostic"],"politics":["Liberal","Conservative","Communist","Socialist","Other"]}},{"wants":"Maybe","gender":"Female","age":"17-19","faculty":["Engineering"],"height":"5'3-5'4","race":["White"],"religion":"Atheist/Agnostic","politics":["Conservative"],"attracted_to":["Male"],"pref":{"age":["17-19","20-23"],"faculty":["Engineering","Health","Science","Accounting/Finance"],"height":["5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White"],"religion":["Atheist/Agnostic"],"politics":["Conservative"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Math"],"height":"5'3-5'4","race":["Hispanic/Latino"],"religion":"Atheist/Agnostic","politics":["Liberal","Socialist"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7"],"race":["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],"religion":["Atheist/Agnostic"],"politics":["Liberal","Socialist"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Math","Engineering"],"height":"5'11-6'1","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","Hispanic/Latino","East Asian","Indigenous"],"religion":["Christian","Jewish","Muslim","Hindu","Atheist/Agnostic"],"politics":["Liberal","Conservative","Communist","Socialist","Other"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Science"],"height":"5'5-5'7","race":["East Asian"],"religion":"Christian","politics":["Other"],"attracted_to":["Male"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Health","Science","Accounting/Finance"],"height":["5'5-5'7","5'8-5'10"],"race":["East Asian"],"religion":["Christian"],"politics":["Other"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Environment"],"height":"5'1-5'2","race":["East Asian"],"religion":"Taoist","politics":["Other"],"attracted_to":["Male"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10"],"race":[],"religion":["Atheist/Agnostic"],"politics":["Other"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Engineering"],"height":"5'11-6'1","race":["White"],"religion":"Christian","politics":["Conservative"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1"],"race":["White"],"religion":["Christian","Jewish"],"politics":["Conservative"]}},{"wants":"Maybe","gender":"Male","age":"17-19","faculty":["Engineering"],"height":"5'11-6'1","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],"height":["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10"],"race":["White","East Asian"],"religion":["Christian","Jewish","Muslim","Hindu","Atheist/Agnostic"],"politics":["Liberal","Conservative","Socialist"]}},{"wants":"Yes","gender":"Male","age":"17-19","faculty":["Math"],"height":"5'11-6'1","race":["East Asian"],"religion":"Atheist/Agnostic","politics":["Liberal","Conservative","Communist","Socialist"],"attracted_to":["Female"],"pref":{"age":["17-19"],"faculty":["Math"],"height":["5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3"],"race":["White","East Asian","South Asian","Black","Arab/Middle Eastern"],"religion":["Christian"],"politics":["Liberal","Conservative","Communist","Socialist"]}},{"wants":"Yes","gender":"Female","age":"17-19","faculty":["Math"],"height":"5'1-5'2","race":["East Asian"],"religion":"Buddhist","politics":["Liberal","Communist","Socialist"],"attracted_to":["Male"],"pref":{"age":["17-19","20-23"],"faculty":["Math","Engineering","Accounting/Finance"],"height":["5'11-6'1","6'2-6'3","6'4+"],"race":["White","Hispanic/Latino","East Asian","Arab/Middle Eastern"],"religion":["Christian","Jewish","Muslim","Atheist/Agnostic"],"politics":["Liberal","Conservative","Communist","Socialist","Other"]}}];
+const OPT = {
+  gender:["Male","Female","Other"], age:["17-19","20-23","24+"],
+  faculty:["Math","Engineering","Arts","Environment","Health","Science","Accounting/Finance"],
+  height:["Under 5'0","5'1-5'2","5'3-5'4","5'5-5'7","5'8-5'10","5'11-6'1","6'2-6'3","6'4+"],
+  race:["White","Hispanic/Latino","East Asian","South Asian","Black","Indigenous","Arab/Middle Eastern"],
+  religion:["Christian","Jewish","Muslim","Hindu","Atheist/Agnostic","Other"],
+  politics:["Liberal","Conservative","Communist","Socialist","Other"]};
+const SREL = OPT.religion.slice(0,5), SPOL = OPT.politics.slice(0,4);
+const DIMS = ["gender","age","faculty","height","race","religion","politics"];
+const LABEL = {age:"age",faculty:"faculty",height:"height",race:"background",religion:"religion",politics:"politics"};
+const CFG = {met:40, success:0.08, maybe:0.5, desire:{Yes:1,Maybe:.5,No:.1}};
+
+// Pool: real survey responses plus extra profiles modelled on typical Waterloo demographics.
+function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const R = rng(2026);
+const pick = w => {let t=0;for(const k in w)t+=w[k];let x=R()*t;for(const k in w){x-=w[k];if(x<=0)return k}return Object.keys(w)[0]};
+const sample = (a,n) => a.map(v=>[R(),v]).sort((x,y)=>x[0]-y[0]).slice(0,n).map(x=>x[1]);
+const uniq = a => [...new Set(a)];
+const HW = {m:[1,2,6,15,32,28,14,2], f:[3,12,30,32,16,5,1,1]};
+const hIdx = w => {let x=R()*w.reduce((a,b)=>a+b),i=0;for(;i<7&&(x-=w[i])>0;i++);return i};
+function synth(){
+  const gender = pick({Male:52,Female:46,Other:2}), male = gender==="Male";
+  const faculty = [pick(male?{Engineering:34,Math:28,Science:9,Arts:8,Health:5,Environment:4,"Accounting/Finance":12}
+                          :{Engineering:16,Math:20,Science:16,Arts:18,Health:14,Environment:7,"Accounting/Finance":9})];
+  const age = pick({"17-19":42,"20-23":50,"24+":8});
+  const hi = hIdx(male?HW.m:HW.f);
+  let race = [pick({"East Asian":30,"South Asian":22,White:25,"Arab/Middle Eastern":8,Black:5,"Hispanic/Latino":4,Indigenous:1})];
+  if(R()<.06) race.push(sample(OPT.race,1)[0]);
+  const religion = pick({"Atheist/Agnostic":44,Christian:16,Muslim:12,Hindu:12,Jewish:2,Other:14});
+  const politics = [pick({Liberal:48,Conservative:12,Socialist:10,Communist:3,Other:27})];
+  let x = R();
+  const attracted_to = male ? (x<.9?["Female"]:x<.95?["Male"]:["Male","Female"])
+    : gender==="Female" ? (x<.88?["Male"]:x<.94?["Female"]:["Male","Female"]) : ["Male","Female","Other"];
+  const ai = OPT.age.indexOf(age); x = R();
+  const pAge = x<.5?[age]:x<.85?OPT.age.slice(Math.max(0,ai-1),ai+2):[];
+  const pFac = R()<.6?[]:uniq([...(R()<.5?faculty:[]),...sample(OPT.faculty,3+Math.floor(R()*3))]);
+  let lo=Math.max(0,hi-2), hi2=Math.min(7,hi+2);
+  if(attracted_to.length===1&&attracted_to[0]==="Female"&&male){lo=Math.max(0,hi-4);hi2=hi}
+  if(attracted_to.length===1&&attracted_to[0]==="Male"&&gender==="Female"){lo=Math.max(0,hi-1);hi2=Math.min(7,hi+4)}
+  const pHt = R()<.4?[]:OPT.height.slice(lo,hi2+1);
+  x = R();
+  const pRace = x<.5?[]:x<.85?uniq([...race,...sample(OPT.race,2)]):sample(OPT.race,3);
+  const pRel = R()<.55?[]:SREL.includes(religion)?uniq([religion,...(R()<.6?["Atheist/Agnostic"]:[]),...sample(SREL,1)]):uniq([...sample(SREL,3),"Atheist/Agnostic"]);
+  const pPol = R()<.5?[]:uniq([...politics,...sample(OPT.politics,1+Math.floor(R()*2))]);
+  return {wants:pick({Yes:55,Maybe:45}),gender,age,faculty,height:OPT.height[hi],race,religion,politics,attracted_to,
+          pref:{age:pAge,faculty:pFac,height:pHt,race:pRace,religion:pRel,politics:pPol}};
+}
+const POOL = [...REAL, ...Array.from({length:500-REAL.length}, synth)];
+
+const accepts = (c,d,p) => {
+  if(d==="gender") return !c.attracted_to.length || c.attracted_to.includes(p.gender);
+  const al = c.pref[d]; if(!al.length) return true;
+  const vs = [].concat(p[d]);
+  if(d==="religion" && !SREL.includes(vs[0])) return al.length>=4;
+  return vs.some(v=>al.includes(v));
+};
+const side = (c,p) => Object.fromEntries(DIMS.map(d=>[d,accepts(c,d,p)]));
+
+const fmtp=v=>v>=1?Math.round(v):Math.max(0.01,Math.round(v*100)/100);
+function evaluate(profile){
+  const me = {...profile, politics:(profile.politics.length?profile.politics:["Other"]).map(p=>SPOL.includes(p)?p:"Other")};
+  let w=0, gOK=0, yl=0, ly=0; const block={};
+  for(const c of POOL){
+    const a=side(me,c), b=side(c,me);
+    if(DIMS.every(d=>a[d]))yl++; if(DIMS.every(d=>b[d]))ly++;
+    if(DIMS.every(d=>a[d]&&b[d])) w += c.wants==="Yes"?1:CFG.maybe;
+    if(a.gender&&b.gender){gOK++;for(const d of DIMS.slice(1)){
+      if(!a[d]) block["you|"+d]=(block["you|"+d]||0)+1;
+      if(!b[d]) block["them|"+d]=(block["them|"+d]||0)+1;}}
+  }
+  const rate = w/POOL.length, desire = CFG.desire[profile.wants]??1;
+  const raw = Math.min(99, 100*(1-Math.pow(1-CFG.success, CFG.met*rate*desire)));
+  const pct = raw>=1 ? Math.round(raw) : Math.max(0.01, Math.round(raw*100)/100);
+  const top = Object.entries(block).filter(([,n])=>n/Math.max(gOK,1)>.15).sort((x,y)=>y[1]-x[1]).slice(0,3).map(([k])=>k.split("|"));
+  return {pct, top, youLike:fmtp(100*yl/POOL.length), likeYou:fmtp(100*ly/POOL.length)};
+}
+//MODEL-END
+const EMO={Math:"➗",Engineering:"⚙️",Arts:"🎨",Environment:"🌱",Health:"🩺",Science:"🔬","Accounting/Finance":"💼"};
+const withEmo=v=>EMO[v]?EMO[v]+" "+v:v;
+const state={wants:"Yes",in_relationship:false,gender:"",age:"",height:"",religion:"",faculty:[],race:[],politics:[],attracted_to:[],
+  pref:{age:[],faculty:[],height:[],race:[],religion:[],politics:[]}};
+const $=id=>document.getElementById(id);
+const el=(t,a={},...k)=>{const n=document.createElement(t);for(const[x,v]of Object.entries(a))x.startsWith("on")?n[x]=v:n.setAttribute(x,v);k.flat().forEach(c=>n.append(c));return n};
+function chips(legend,hint,vals,get,set,multi,fmt=v=>v){
+  const box=el("div",{class:"chips",role:"group","aria-label":legend});
+  vals.forEach(v=>{
+    const b=el("button",{type:"button",class:"chip","aria-pressed":"false"},fmt(v));
+    const sync=()=>b.setAttribute("aria-pressed",String(multi?get().includes(v):get()===v));
+    b.onclick=()=>{ if(multi){const a=get();set(a.includes(v)?a.filter(x=>x!==v):[...a,v])}else set(get()===v?"":v);
+      box.querySelectorAll(".chip").forEach(c=>c.dispatchEvent(new Event("sync")));ready()};
+    b.addEventListener("sync",sync);sync();box.append(b)});
+  return el("fieldset",{},el("legend",{},legend),hint?el("p",{class:"hint"},hint):"",box);
+}
+function build(){
+  $("cardYou").append(
+    chips("Gender","",OPT.gender,()=>state.gender,v=>state.gender=v,false),
+    chips("Age","",OPT.age,()=>state.age,v=>state.age=v,false),
+    chips("Faculty","Pick all that apply.",OPT.faculty,()=>state.faculty,v=>state.faculty=v,true,withEmo),
+    chips("Height","",OPT.height,()=>state.height,v=>state.height=v,false),
+    chips("Race / ethnicity","Pick all that apply.",OPT.race,()=>state.race,v=>state.race=v,true),
+    chips("Religion","",OPT.religion,()=>state.religion,v=>state.religion=v,false),
+    chips("Political views","Pick all that apply.",OPT.politics,()=>state.politics,v=>state.politics=v,true));
+  $("cardType").append(
+    chips("Attracted to","Pick all that apply.",OPT.gender,()=>state.attracted_to,v=>state.attracted_to=v,true),
+    ...[["age","Age range"],["faculty","Faculty"],["height","Height range"],["race","Race / ethnicity"],["religion","Religion"],["politics","Political views"]]
+      .map(([k,l])=>chips(l,"",k==="religion"?SREL:OPT[k],()=>state.pref[k],v=>state.pref[k]=v,true,k==="faculty"?withEmo:undefined)));
+}
+function ready(){
+  const miss=[!state.gender&&"your gender",!state.age&&"your age",!state.attracted_to.length&&"who you’re attracted to"].filter(Boolean);
+  $("go").disabled=miss.length>0;
+  $("need").textContent=miss.length?"Still needed: "+miss.join(", ")+".":"";
+}
+const TIERS=[[15,"🥀","A long shot"],[35,"🌱","Definitely possible"],[60,"🔥","Good odds"],[101,"💘","Very good odds"]];
+function show(n){$("s1").hidden=n!==1;$("s2").hidden=n!==2;window.scrollTo(0,0)}
+function reveal(){
+  const {pct,youLike,likeYou}=evaluate(state), [,face,label]=TIERS.find(t=>pct<t[0]);
+  const out=$("out"), still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  const steps=["Calculating your odds…","Checking every match both ways…","Almost there…"];
+  const finish=()=>{
+    $("s2").classList.remove("busy");
+    out.innerHTML=`<div class="face">${face}</div><div class="big"><span id="n">0</span><small>%</small></div><div class="tier">${label}</div>
+      <div class="meter"><span id="m"></span></div>
+      <div class="stats"><div><b>${youLike}%</b><span>of people you’d be into</span></div><div><b>${likeYou}%</b><span>of people who’d be into you</span></div></div>`;
+    const n=$("n"), m=$("m"), t0=performance.now();
+    requestAnimationFrame(()=>m.style.width=pct+"%");
+    (function tick(t){const k=still?1:Math.min(1,(t-t0)/1000);const v=pct*(1-Math.pow(1-k,3));n.textContent=pct<1?+v.toFixed(2):Math.round(v);if(k<1)requestAnimationFrame(tick)})(t0);
+  };
+  show(2);
+  if(still){finish();return}
+  $("s2").classList.add("busy");
+  let c=3;
+  const step=()=>{out.innerHTML=`<div class="calc"><div class="count">${c}</div><p>${steps[3-c]}</p></div>`};
+  step();
+  const iv=setInterval(()=>{c--;if(c<1){clearInterval(iv);finish()}else step()},800);
+}
+function qr(id,size){try{new QRCode($(id),{text:QR_URL,width:size,height:size,colorDark:"#2a1a5e",colorLight:"#ffffff"});return true}catch(e){return false}}
+const QR_URL=PAGE_URL||(location.protocol.startsWith("http")?location.href.split("#")[0]:"");
+build();ready();
+$("go").onclick=reveal;$("back").onclick=()=>show(1);
+if(QR_URL&&window.QRCode){
+  if(qr("qr1",120)) document.querySelector(".qr1").hidden=false;
+  if(qr("qr2",150)) document.querySelector(".qrbox").hidden=false;
+}
+</script>
+</body>
+</html>
